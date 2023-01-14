@@ -1,0 +1,55 @@
+{
+    "name": "@techor/log",
+    "license": "MIT",
+    "scripts": {
+        "build": "aron pack --platform=node",
+        "dev": "npm run build -- --watch",
+        "type-check": "tsc --noEmit",
+        "lint": "eslint src"
+    },
+    "description": "A set of human-friendly and beautiful console log syntax",
+    "author": {
+        "name": "Aron",
+        "email": "i@aron.tw",
+        "url": "https://aron.tw"
+    },
+    "homepage": "https://github.com/1aron/techor",
+    "bugs": {
+        "url": "https://github.com/1aron/techor/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/1aron/techor.git",
+        "directory": "packages/log"
+    },
+    "keywords": [
+        "console",
+        "log",
+        "chalk",
+        "semantic"
+    ],
+    "main": "./dist/index.cjs",
+    "jsnext:main": "./dist/index.mjs",
+    "esnext": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "chalk": "^5.1.2",
+        "dedent": "^0.7.0",
+        "object-treeify": "^3.3.1"
+    }
+}
